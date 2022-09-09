@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <h1>Emblem</h1>
+        <span><img src="images/emblem_logo_128.png" alt="" /></span>
+        <h2>Rare, Collectible Books</h2>
+      </div>
+
+      <nav class="head-nav">
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="">Accessibility</a></li>
+        <li><a href="">Login</a></li>
+      </nav>
+
+      <nav class="main-nav">
+        <ul>
+          <li class="home-grid"><a href="index.html">Home</a></li>
+          <li class="books-grid">
+            <a href="books.html">Books</a>
+            <div class="dropdown">
+              <div class="dropbtn"></div>
+              <div class="dropdown-content">
+                <a href="#">20th Century Books</a>
+                <a href="19th century books.html">19th Century Books</a>
+                <a href="#">18th Century Books</a>
+                <a href="#">Rare Books</a>
+              </div>
+            </div>
+          </li>
+          <li class="delivery-grid"><a href="delivery.html">Delivery</a></li>
+          <li class="about-grid"><a href="">About us</a></li>
+          <li class="investment-grid"><a href="">Books as an Investment</a></li>
+        </ul>
+      </nav>
+
+      <div class="content-contact-form">
+        <div class="description-form">
+          <h1>Contact us</h1>
+          <p>
+            Please feel free to contact is if you are looking to buy a book not
+            listed in our collection, or you are looking to sell a book, have a
+            book valued or have a book repaired. We try to answer all queries
+            within 24 hours of receipt
+          </p>
+          <p><b>Email:</b> sales@emblem-rare-books.com</p>
+          <p><b>Phone:</b> 0208 555 6789</p>
+          <h2>Contact Form:</h2>
+        </div>
+
+        <form action="" class="form-information">
+          <div class="contact-information">
+            <p>Contact Information:</p>
+            <ul>
+              <li>
+                <select type="text" class="title">
+                  <option value="">Mr.</option>
+                  <option value="">Mrs.</option>
+                  <option value="">Miss</option>
+                </select>
+                 <label for="title">Title</label>
+              </li>
+              <li>
+                <input type="text" class="first-name" pattern="[A-Z][a-z]+" />
+                 <label for="first-name">First name</label>
+              </li>
+              <li>
+                <input type="text" class="surname" pattern="[A-Z][a-z]+" />
+                 <label for="surname">Surname</label>
+              </li>
+              <li>
+                <input type="text" class="email" pattern=".{2,}@.{2,}" />
+                <label for="email">Email</label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="interests">
+            <p>Interest:</p>
+            <ul>
+              <li>
+                <input type="checkbox" class="interest" id="20th" />
+                <label for="20th">20th Century Books</label>
+              </li>
+              <li>
+                <input type="checkbox" class="interest" id="19th" />
+                <label for="19th">19th Century Books</label>
+              </li>
+              <li>
+                <input type="checkbox" class="interest" id="18th" />
+                <label for="18th">18th Century Books</label>
+              </li>
+              <li>
+                <input type="checkbox" class="interest" id="rare" />
+                <label for="rare">Rare Books</label>
+              </li>
+            </ul>
+          </div>
+          <div class="more-info">
+            <p>Are you a dealer?</p>
+            <ul>
+              <li>
+                <input type="radio" class="yes" name="dealer" />
+                <label for="yes">Yes</label>
+              </li>
+              <li>
+                <input type="radio" class="no" name="dealer" />
+                <label for="no">No</label>
+              </li>
+            </ul>
+          </div>
+          <div class="selling-or-buying">
+            <p>Selling or Buying?</p>
+            <ul>
+              <li>
+                <input type="radio" class="yes" name="seller" />
+                <label for="selling">Selling</label>
+              </li>
+              <li>
+                <input type="radio" class="no" name="seller" />
+                <label for="buying">Buying</label>
+              </li>
+            </ul>
+          </div>
+          <input type="submit" class="submit"/>
+        </form>
+      </div>
+
+      <footer class="footer">
+        <nav class="footer-nav">
+          <a href="">Privacy</a>
+          <a href="">Terms and Conditions</a>
+          <a href="">Returns</a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

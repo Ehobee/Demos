@@ -1,0 +1,373 @@
+@font-face {
+    font-family: "Parisian";
+    src: url("font/parisr.woff") format('woff');
+}
+
+:root {
+    --main: #236841;
+    --secondary: #a5873a;
+    --shadow: #3aa568;
+}
+
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        'logo box-a box-a'
+        'main-nav main-nav main-nav'
+        'books books books'
+        'content content features'
+        'video video video'
+        'footer footer footer';
+}
+
+.logo {
+    font-family: "Parisian";
+    color: var(--main);
+    font-size: 2rem;
+    grid-area: logo;
+    padding: 10px 0;
+}
+
+.logo h1 {
+    font-size: 60px;
+    margin: 0px;
+    color: var(--secondary);
+}
+
+.logo h2 {
+    font-size: 40px;
+    margin: 0px;
+    padding: 0px;
+    color: var(--secondary);
+}
+
+.head-nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-area: box-a;
+    margin-top: 120px;
+    padding-left: 140px;
+}
+
+.head-nav li {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--main);
+    list-style: none;
+}
+
+.head-nav a {
+    color: var(--main);
+    text-decoration: none;
+}
+
+.main-nav {
+    display: grid;
+    grid-area: main-nav;
+}
+
+.main-nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    gap: 40px;
+    margin-right: 40px;
+}
+
+.main-nav a {
+    background: var(--main);
+    display: block;
+    text-decoration: none;
+    padding: 0.8rem;
+    color: white;
+    box-shadow: var(--shadow);
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.main-nav a:hover {
+    background: var(--shadow);
+}
+
+.head-nav a:hover {
+    color: var(--secondary)
+}
+
+.books-grid {
+    position: relative;
+}
+
+.dropdown {
+    background-color: #fff4f0;
+    padding: 1rem 0;
+    position: absolute;
+    display: none;
+    top: 25px;
+    left: 0%;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    list-style: none;
+    gap: 5px;
+}
+
+
+.books-grid:hover .dropdown {
+    display: block;
+}
+
+.content {
+    display: grid;
+    color: var(--main);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0.5rem;
+    grid-area: content;
+    grid-template-columns: 0.95fr;
+    font-size: 18px;
+}
+
+.features {
+    color: var(--main);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem 0 1rem;
+    padding: 0.5rem;
+    grid-area: features;
+    display: grid;
+}
+
+.video {
+    display: grid;
+    grid-area: video;
+    justify-self: center;
+    margin-top: 100px;
+}
+
+.footer {
+    margin: 100px;
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-area: footer;
+    justify-self: center;
+    border-style: double;
+    border-width: 5px;
+    border-color: var(--secondary);
+    padding: 50px;
+}
+
+.footer a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--main);
+    padding: 60px;
+}
+
+.book-of-the-month {
+    border-style: double;
+    border-width: 5px;
+    border-color: var(--secondary);
+    padding: 20px;
+}
+
+.book-of-the-month h2 {
+    color: var(--secondary);
+}
+
+.book-of-the-month h3 {
+    color: var(--secondary);
+}
+
+.books-description {
+    margin: 60px;
+    padding: 60px;
+    font-size: 18px;
+}
+
+.books-description a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+.authors {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    border-style: double;
+    border-width: 5px;
+    border-color: var(--secondary);
+}
+
+.authors li {
+    list-style: none;
+    margin: 10px;
+    padding-right: 30px;
+}
+
+.books {
+    display: grid;
+    grid-area: books;
+    grid-template-areas:
+        'book book book'
+        'img text text';
+}
+
+.page-text {
+    display: grid;
+    grid-area: book;
+    color: var(--main);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-text p {
+    font-size: 18px;
+}
+
+.books-images {
+    display: grid;
+    grid-area: img;
+    list-style: none;
+    justify-items: center;
+}
+
+.books-images p {
+    color: var(--secondary);
+}
+
+.books-info {
+    display: grid;
+    grid-area: text;
+}
+
+.books-info ul {
+    margin: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--main);
+}
+
+.books-images li {
+    padding: 50px;
+}
+
+.books-images {
+    border-style: double;
+    border-width: 5px;
+    border-color: var(--secondary);
+}
+
+.content-table {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-area: books;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--main);
+    font-size: 18px;
+}
+
+.delivery {
+    border-style: double;
+    border-width: 5px;
+    border-color: var(--secondary);
+    height: 400px;
+    text-align: center;
+}
+
+.table {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.content-contact-form {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--main);
+    font-size: 18px;
+    display: grid;
+    grid-area: books;
+    grid-template-areas:
+        'description'
+}
+
+.description-form {
+    display: grid;
+    grid-area: description;
+}
+
+.form-information {
+    border-style: double;
+    border-width: 5px;
+    border-color: var(--secondary);
+    display: grid;
+    grid-template-areas:
+        'form1 form2'
+        'form3 form4'
+        'form5 form5';
+}
+
+.contact-information{
+    display: grid;
+    grid-area: form1;
+    margin: 20px;
+}
+
+.interests{
+    display: grid;
+        grid-area: form2;
+        margin: 20px;
+}
+
+.more-info {
+    display: grid;
+    grid-area: form3;
+    margin-left: 20px;
+}
+
+.selling-or-buying {
+    display: grid;
+    grid-area: form4;
+}
+
+.submit{
+    display: grid;
+    grid-area: form5;
+    margin: 20px;
+    padding: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
+    background-color: var(--main);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.submit:hover{
+    background-color: var(--shadow);
+}
+
+form li{
+    list-style: none;
+}
+
+.title{
+    width: 180px;
+}
+
+input:invalid:focus {
+    outline: 1px solid #e33e02;
+}
+
+input:valid:focus:not([type=radio]):not([type=checkbox]) {
+    outline: 2px solid var(--shadow)
+}
+
+@media (max-width: 768px) {
+    .main-nav ul {
+        grid-template-columns: 1fr;
+    }
+}
